@@ -141,9 +141,11 @@ const Services = () => {
                     </ul>
                   </div>
 
-                  <Button className="w-full bg-gold hover:bg-gold-dark text-primary">
-                    Réserver ce service
-                  </Button>
+                    <Link to="/contact">
+                      <Button className="w-full bg-gold hover:bg-gold-dark text-primary">
+                        Réserver ce service
+                      </Button>
+                    </Link>
                 </CardContent>
               </Card>
             ))}
@@ -152,16 +154,16 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-serif font-bold text-center mb-12">Services Additionnels</h2>
+      <section className="py-8 sm:py-16 bg-gradient-subtle">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="max-w-2xl sm:max-w-4xl mx-auto">
+            <h2 className="text-lg sm:text-3xl font-serif font-bold text-center mb-6 sm:mb-12">Services Additionnels</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {additionalServices.map((service, index) => (
-                <div key={index} className="flex items-center justify-between p-4 bg-background rounded-lg border">
-                  <span className="font-medium">{service.name}</span>
-                  <span className="text-gold font-semibold">{service.price}</span>
+                <div key={index} className="flex items-center justify-between p-2 sm:p-4 bg-background rounded-lg border">
+                  <span className="font-medium text-xs sm:text-base">{service.name}</span>
+                  <span className="text-gold font-semibold text-xs sm:text-base">{service.price}</span>
                 </div>
               ))}
             </div>
@@ -170,24 +172,26 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-serif font-bold mb-4">
+      <section className="py-10 sm:py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-2 sm:px-4 text-center">
+          <h2 className="text-xl sm:text-4xl font-serif font-bold mb-2 sm:mb-4">
             Besoin d'un devis personnalisé ?
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl mb-4 sm:mb-8 text-primary-foreground/90 max-w-xl sm:max-w-2xl mx-auto">
             Chaque projet est unique. Discutons ensemble de vos besoins 
             pour créer un forfait adapté à vos attentes et votre budget.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-primary shadow-gold">
+              <Button size="lg" variant="default" className="bg-[#ffd700] text-black hover:bg-[#e6c200] hover:text-black border border-[#ffd700] shadow-gold">
                 Demander un devis
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Voir mon portfolio
-            </Button>
+            <Link to="/portfolio">
+              <Button size="lg" variant="default" className="bg-black text-[#ffd700] hover:bg-[#e6c200] hover:text-black shadow-gold">
+                Voir mon portfolio
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

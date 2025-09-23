@@ -50,9 +50,11 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="border-gold text-gold hover:bg-gold hover:text-primary">
-              Réserver une séance
-            </Button>
+              <Link to="/contact">
+                <Button variant="outline" size="sm" className="border-gold text-gold hover:bg-gold hover:text-primary">
+                  Réserver une séance
+                </Button>
+              </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,9 +84,11 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="outline" size="sm" className="w-full border-gold text-gold hover:bg-gold hover:text-primary">
-                Réserver une séance
-              </Button>
+                <Link to="/contact">
+                  <Button variant="outline" size="sm" className="w-full border-gold text-gold hover:bg-gold hover:text-primary" onClick={() => setIsOpen(false)}>
+                    Réserver une séance
+                  </Button>
+                </Link>
             </div>
           </div>
         )}

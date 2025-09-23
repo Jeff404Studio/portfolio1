@@ -2,10 +2,10 @@
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
+    <div className="flex min-h-screen items-center justify-center bg-background px-2">
       <div className="text-center bg-gradient-subtle animate-fade-in">
-        <h1 className="text-6xl font-bold mb-4 text-gold drop-shadow-lg animate-fade-in">Bienvenue</h1>
-        <p className="text-lg text-muted-foreground mb-8 animate-fade-in">Page d'accueil alternative</p>
+        <h1 className="text-3xl sm:text-6xl font-bold mb-2 sm:mb-4 text-gold drop-shadow-lg animate-fade-in">Bienvenue</h1>
+        <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-8 animate-fade-in">Page d'accueil alternative</p>
       </div>
     </div>
   );

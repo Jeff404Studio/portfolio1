@@ -16,7 +16,7 @@ const Footer = () => {
               avec créativité et élégance.
             </p>
             <div className="bg-gold/10 text-gold text-xs px-3 py-1 rounded inline-block">
-              Site de démonstration
+            Site de démonstration by <a href="https://genefty.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gold-light">Genefty</a>
             </div>
           </div>
 
@@ -48,15 +48,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gold" />
-                <span>+33 1 23 45 67 89</span>
+                <span>+33 X XX XX XX XX</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gold" />
-                <span>contact@lumiere-studio.fr</span>
+                <span>xxx@xxx.fr</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gold" />
-                <span>Paris, France</span>
+                <span>Perpignan, France</span>
               </div>
             </div>
             
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; 2024 Lumière Studio. Tous droits réservés. | Site de démonstration</p>
+          <p>&copy; 2024 Lumière Studio. Tous droits réservés. | Site de démonstration by <a href="https://genefty.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gold-light">Genefty</a></p>
         </div>
       </div>
     </footer>

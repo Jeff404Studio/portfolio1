@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
 
-## Project info
+# Site Photographe Freelance — Démo Genefty
 
-**URL**: https://lovable.dev/projects/43179fbd-1743-44f4-b0c6-2b91f8737851
+Ce dépôt présente un site vitrine de photographe freelance, réalisé comme démonstration des capacités de l'agence Genefty.
 
-## How can I edit this code?
+## À propos du projet
 
-There are several ways of editing your application.
+Ce site a été entièrement conçu pour illustrer la création d’un portfolio moderne et performant, adapté aux besoins des freelances et entrepreneurs. Il s’agit d’un exemple de réalisation Genefty, destiné à montrer notre savoir-faire en développement web sur-mesure.
 
-**Use Lovable**
+### Objectif
+Ce projet est une **démo** : il n’est pas destiné à la production, mais à servir de vitrine technique et graphique pour Genefty.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/43179fbd-1743-44f4-b0c6-2b91f8737851) and start prompting.
+## Technologies utilisées
 
-Changes made via Lovable will be committed automatically to this repo.
+Le site a été développé avec les technologies suivantes :
 
-**Use your preferred IDE**
+- **React** (framework JavaScript moderne)
+- **TypeScript** (typage statique pour la robustesse)
+- **Vite** (outil de build rapide et moderne)
+- **Tailwind CSS** (framework CSS utilitaire pour le design responsive)
+- **shadcn/ui** (bibliothèque de composants UI)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Étapes de création
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Initialisation du projet** : création d’un projet Vite avec React et TypeScript.
+2. **Configuration du design** : intégration de Tailwind CSS et personnalisation du thème.
+3. **Développement des composants** : création des pages (Accueil, Portfolio, Services, Contact, etc.) et des composants réutilisables (Navigation, Footer, UI).
+4. **Ajout des assets** : intégration d’images et d’illustrations pour la démo.
+5. **Optimisation** : configuration des fichiers de build, gestion des dépendances et optimisation des performances.
 
-Follow these steps:
+## Installation et lancement local
+
+Pour tester le site en local :
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone <URL_DU_DEPOT>
+cd <NOM_DU_DOSSIER>
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Le site sera accessible sur `http://localhost:5173` (par défaut).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Déploiement
 
-**Use GitHub Codespaces**
+Ce site étant une démo, le déploiement en production n’est pas prévu. Pour toute demande de mise en ligne ou d’accompagnement technique, contactez Genefty.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Personnalisation et évolution
 
-## What technologies are used for this project?
+Genefty propose la création de sites sur-mesure, évolutifs et sécurisés. Pour adapter ce projet à vos besoins, ajouter des fonctionnalités ou connecter un domaine personnalisé, notre équipe vous accompagne à chaque étape.
 
-This project is built with:
+## Contact
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Pour toute question, demande de devis ou projet personnalisé :
 
-## How can I deploy this project?
+- **Site web** : [genefty.com](https://genefty.com)
+- **Email** : contact@genefty.com
 
-Simply open [Lovable](https://lovable.dev/projects/43179fbd-1743-44f4-b0c6-2b91f8737851) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2025 Genefty — Démo portfolio photographe freelance
