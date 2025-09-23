@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Lockfiles inutiles
+bun.lockb
+package-lock.json
