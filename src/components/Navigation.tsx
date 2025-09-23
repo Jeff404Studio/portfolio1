@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Camera } from "lucide-react";
+import "../nav-link.css";
+import "../genefty-link.css";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +27,14 @@ const Navigation = () => {
             <Camera className="h-6 w-6 text-gold" />
             <span>Lumière Studio</span>
             <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded">DEMO</span>
+            <a
+              href="https://genefty.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="genefty-link text-xs bg-gold/10 text-gold px-2 py-1 rounded ml-2"
+            >
+              <span className="relative z-10">by Genefty</span>
+            </a>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,7 +43,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-gold ${
+                className={`nav-link text-sm font-medium ${
                   isActive(item.path) ? "text-gold" : "text-foreground"
                 }`}
               >

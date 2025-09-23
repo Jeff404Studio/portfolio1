@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -35,19 +36,36 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        gold: {
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "#1a2238", // Bleu nuit
+              foreground: "#fffbe6", // Blanc doré
+            },
+            accent: {
+              DEFAULT: "#ffd700", // Doré
+              light: "#fffbe6", // Blanc doré
+            },
+            secondary: {
+              DEFAULT: "#e6e6e6", // Gris doux
+              beige: "#f5f5dc", // Beige
+            },
+            neutral: {
+              DEFAULT: "#f8f9fa", // Blanc lumineux
+              dark: "#222", // Gris foncé
+            },
+            error: {
+              DEFAULT: "#e63946"
+            },
+            success: {
+              DEFAULT: "#4caf50"
+            },
+          },
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
@@ -107,5 +125,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;
