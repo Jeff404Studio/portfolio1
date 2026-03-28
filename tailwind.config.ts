@@ -8,7 +8,11 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.25rem",
+        lg: "2rem",
+      },
       screens: {
         "2xl": "1400px",
       },
@@ -36,36 +40,7 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        extend: {
-          colors: {
-            border: "hsl(var(--border))",
-            input: "hsl(var(--input))",
-            ring: "hsl(var(--ring))",
-            background: "hsl(var(--background))",
-            foreground: "hsl(var(--foreground))",
-            primary: {
-              DEFAULT: "#1a2238", // Bleu nuit
-              foreground: "#fffbe6", // Blanc doré
-            },
-            accent: {
-              DEFAULT: "#ffd700", // Doré
-              light: "#fffbe6", // Blanc doré
-            },
-            secondary: {
-              DEFAULT: "#e6e6e6", // Gris doux
-              beige: "#f5f5dc", // Beige
-            },
-            neutral: {
-              DEFAULT: "#f8f9fa", // Blanc lumineux
-              dark: "#222", // Gris foncé
-            },
-            error: {
-              DEFAULT: "#e63946"
-            },
-            success: {
-              DEFAULT: "#4caf50"
-            },
-          },
+        gold: {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",

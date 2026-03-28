@@ -93,10 +93,10 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-16 pb-10 sm:pt-24 sm:pb-16 bg-gradient-subtle">
-        <div className="container mx-auto px-2 sm:px-4">
+      <section className="pt-[calc(4rem+env(safe-area-inset-top))] pb-10 sm:pt-24 sm:pb-16 bg-gradient-subtle">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-2xl sm:max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-5xl font-serif font-bold mb-4 sm:mb-6">À Propos</h1>
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold mb-4 sm:mb-6 text-balance">À Propos</h1>
             <div className="bg-gold/10 text-gold text-xs sm:text-sm px-3 py-1 sm:px-4 sm:py-2 rounded-full inline-block mb-4 sm:mb-6">
               Site de démonstration
             </div>
@@ -109,19 +109,19 @@ const About = () => {
 
       {/* Main About Section */}
       <section className="py-10 sm:py-20">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Image */}
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-2xl shadow-elegant">
                 <img 
                   src={photographerImage} 
                   alt="Photographe professionnel"
-                  className="w-full h-64 sm:h-[400px] md:h-[600px] object-cover"
+                  className="h-56 w-full object-cover min-[400px]:h-72 sm:h-96 md:h-[480px] lg:h-[560px]"
                 />
-                <div className="absolute top-6 right-6">
-                  <Badge className="bg-yellow-400 text-primary font-bold shadow-lg animate-pulse hover:bg-yellow-400">
-                    <Star className="h-3 w-3 mr-1 text-yellow-600" />
+                <div className="absolute right-3 top-3 sm:right-6 sm:top-6">
+                  <Badge className="bg-yellow-400 text-primary text-xs font-bold shadow-lg animate-pulse hover:bg-yellow-400 sm:text-sm">
+                    <Star className="mr-1 h-3 w-3 text-yellow-600" />
                     Photographe Freelance
                   </Badge>
                 </div>
@@ -129,12 +129,12 @@ const About = () => {
             </div>
 
             {/* Content */}
-            <div className="space-y-6">
+            <div className="order-1 space-y-6 lg:order-2">
               <div>
                 <h2 className="text-2xl sm:text-4xl font-serif font-bold mb-2 sm:mb-4">
                   Théo Lumière
                 </h2>
-                <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
+                <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 text-pretty">
                   Photographe freelance basé en Occitanie, j'accompagne particuliers et entreprises dans toute la région : Toulouse, Montpellier, Nîmes, Perpignan, Béziers, Narbonne... Je propose des séances photo sur-mesure pour vos portraits, mariages, événements et reportages professionnels. Passionné par la diversité des paysages occitans, j'apporte une approche locale et personnalisée à chaque projet. Besoin d'un photographe en Occitanie ? Profitez de mon expertise régionale pour des images authentiques et adaptées à votre territoire.
                 </p>
               </div>
@@ -174,8 +174,11 @@ const About = () => {
                 ))}
               </div>
 
-              <Link to="/contact">
-                <Button size="lg" className="bg-yellow-400 text-black font-bold shadow-gold mt-8 hover:bg-yellow-400 w-full max-w-xs mx-auto sm:w-auto sm:max-w-none">
+              <Link to="/contact" className="block w-full sm:inline-block">
+                <Button
+                  size="lg"
+                  className="mt-8 w-full min-h-11 max-w-xs touch-manipulation bg-yellow-400 font-bold text-black shadow-gold hover:bg-yellow-400 sm:max-w-none"
+                >
                   Travaillons ensemble
                 </Button>
               </Link>
@@ -249,14 +252,20 @@ const About = () => {
             Discutons de votre projet photo autour d'un café. 
             La première consultation est toujours gratuite et sans engagement.
           </p>
-          <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center items-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-yellow-400 text-black font-bold shadow-gold hover:bg-yellow-400 w-full max-w-xs mx-auto sm:w-auto sm:max-w-none">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 px-2">
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full min-h-11 touch-manipulation bg-yellow-400 font-bold text-black shadow-gold hover:bg-yellow-400 sm:w-auto"
+              >
                 Réserver une consultation
               </Button>
             </Link>
-            <Link to="/services">
-              <Button size="lg" className="bg-yellow-400 text-black font-bold shadow-gold hover:bg-yellow-400">
+            <Link to="/services" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full min-h-11 touch-manipulation bg-yellow-400 font-bold text-black shadow-gold hover:bg-yellow-400 sm:w-auto"
+              >
                 Découvrir mes services
               </Button>
             </Link>

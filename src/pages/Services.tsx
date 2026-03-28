@@ -75,14 +75,14 @@ const Services = () => {
       <Navigation />
       
       {/* Header */}
-      <section className="pt-24 pb-16 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
+      <section className="pt-[calc(4rem+env(safe-area-inset-top))] pb-10 sm:pt-24 sm:pb-16 bg-gradient-subtle">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-serif font-bold mb-6">Mes Services</h1>
-            <div className="bg-gold/10 text-gold text-sm px-4 py-2 rounded-full inline-block mb-6">
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold mb-4 sm:mb-6 text-balance">Mes Services</h1>
+            <div className="bg-gold/10 text-gold text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded-full inline-block mb-4 sm:mb-6">
               Site de démonstration
             </div>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-xl text-muted-foreground text-pretty">
               Des prestations photo sur mesure pour tous vos projets, 
               alliant créativité artistique et professionnalisme.
             </p>
@@ -91,9 +91,9 @@ const Services = () => {
       </section>
 
       {/* Main Services */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <section className="py-10 sm:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service) => (
               <Card key={service.id} className="group hover:shadow-elegant transition-all duration-300 relative overflow-hidden">
                 {service.popular && (
@@ -103,7 +103,7 @@ const Services = () => {
                   </Badge>
                 )}
                 
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
@@ -115,11 +115,11 @@ const Services = () => {
                   </div>
                 </div>
 
-                <CardHeader>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
+                <CardHeader className="space-y-3">
+                  <CardTitle className="text-lg sm:text-xl text-balance">{service.title}</CardTitle>
+                  <div className="flex flex-col gap-2 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-4 w-4 shrink-0" />
                       {service.duration}
                     </div>
                     <div className="font-semibold text-gold">{service.price}</div>
@@ -142,7 +142,7 @@ const Services = () => {
                   </div>
 
                     <Link to="/contact">
-                      <Button className="w-full bg-gold hover:bg-gold-dark text-primary">
+                      <Button className="w-full min-h-11 touch-manipulation bg-gold hover:bg-gold-dark text-primary">
                         Réserver ce service
                       </Button>
                     </Link>
@@ -181,14 +181,22 @@ const Services = () => {
             Chaque projet est unique. Discutons ensemble de vos besoins 
             pour créer un forfait adapté à vos attentes et votre budget.
           </p>
-          <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" variant="default" className="bg-[#ffd700] text-black hover:bg-[#e6c200] hover:text-black border border-[#ffd700] shadow-gold">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 px-2">
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="default"
+                className="w-full min-h-11 touch-manipulation sm:w-auto bg-[#ffd700] text-black hover:bg-[#e6c200] hover:text-black border border-[#ffd700] shadow-gold"
+              >
                 Demander un devis
               </Button>
             </Link>
-            <Link to="/portfolio">
-              <Button size="lg" variant="default" className="bg-black text-[#ffd700] hover:bg-[#e6c200] hover:text-black shadow-gold">
+            <Link to="/portfolio" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="default"
+                className="w-full min-h-11 touch-manipulation sm:w-auto bg-black text-[#ffd700] hover:bg-[#e6c200] hover:text-black shadow-gold"
+              >
                 Voir mon portfolio
               </Button>
             </Link>

@@ -70,10 +70,10 @@ const Contact = () => {
       <Navigation />
       
       {/* Header */}
-      <section className="pt-16 pb-10 sm:pt-20 sm:pb-16 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
+      <section className="pt-[calc(4rem+env(safe-area-inset-top))] pb-10 sm:pt-20 sm:pb-16 bg-gradient-subtle">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-5xl font-serif font-bold mb-4 sm:mb-6">Contact</h1>
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold mb-4 sm:mb-6 text-balance">Contact</h1>
             <div className="bg-gold/10 text-gold text-xs sm:text-sm px-3 py-1 sm:px-4 sm:py-2 rounded-full inline-block mb-4 sm:mb-6">
               Site de démonstration
             </div>
@@ -141,7 +141,7 @@ const Contact = () => {
                         <div className="space-y-2">
                           <Label htmlFor="service">Type de service *</Label>
                           <Select value={formData.service} onValueChange={(value) => setFormData({...formData, service: value})}>
-                            <SelectTrigger>
+                            <SelectTrigger className="min-h-11 w-full touch-manipulation">
                               <SelectValue placeholder="Choisir un service" />
                             </SelectTrigger>
                             <SelectContent>
@@ -177,7 +177,7 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full bg-gold hover:bg-gold-dark text-primary shadow-gold">
+                      <Button type="submit" size="lg" className="w-full min-h-11 touch-manipulation bg-gold hover:bg-gold-dark text-primary shadow-gold">
                         <Send className="mr-2 h-4 w-4" />
                         <span className="hidden sm:inline">Envoyer ma demande</span>
                         <span className="sm:hidden">Envoyer</span>
